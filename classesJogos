@@ -1,0 +1,36 @@
+class heroi{
+    constructor(nome, idade, tipo){
+        this.nome = nome
+        this.idade = idade
+        this.tipo = tipo
+    }
+
+    tipoAtaqueHeroi(tipo){
+        let ataqueHeroi;
+    
+        if (tipo === "mago") {
+            ataqueHeroi = "magia";
+        } else if (tipo === "guerreiro") {
+            ataqueHeroi = "espada";
+        } else if (tipo === "monge") {
+            ataqueHeroi = "artes marciais";
+        } else {
+            ataqueHeroi = "shuriken";
+        }
+
+        return ataqueHeroi
+    }
+
+    atacar(){
+        console.log(`O personagem ${this.nome}, com idade de ${this.idade} anos, sendo um ${this.tipo} atacou usando ${this.tipoAtaqueHeroi(this.tipo)}`)
+    }
+}
+
+let resultadoHeroiMago = new heroi("Dust", 15, "mago")
+resultadoHeroiMago.atacar()
+let resultadoHeroiGuerreiro = new heroi("Dust", 15, "guerreiro")
+resultadoHeroiGuerreiro.atacar()
+let resultadoHeroiMonge = new heroi("Dust", 15, "monge")
+resultadoHeroiMonge.atacar()
+let resultadoHeroiNinja = new heroi("Dust", 15, "ninja")
+resultadoHeroiNinja.atacar()
